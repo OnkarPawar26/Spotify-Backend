@@ -55,7 +55,7 @@ async function getAllMusic(req, res) {
 
   const musics = await musicModel
   .find()
-  .skip(10)
+  .skip(1) //set the number of musics to skip (for pagination)
   .limit(10)
   .populate('artist', ['username'])
 
